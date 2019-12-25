@@ -9,11 +9,11 @@ LOGIN = "neenahkeith@gmail.com"
 PASSWORD = "Plussix@88"
 LINK = "https://account.meraki.com/secure/login/dashboard_login"
 # PLEASE, PUT YOUR PATH TO CHROMEDRIVER
-PATH_TO_CHROMEDRIVER = ''
+PATH_TO_CHROMEDRIVER = "C:\\Users\\Катерина\\Desktop\\Cisco-Meraki-Selenium-project-master\\chromedriver.exe"
 # PLEASE, WRITE HERE FILE'S NAME
 FILE = 'Network.csv'
 # PLEASE, WRITE HERE PATH TO CSV FILE
-PATH_TO_CSV_FILE = ''
+PATH_TO_CSV_FILE = "C:\\Users\\Катерина\\Desktop\\Cisco-Meraki-Selenium-project-master\\"
 COLUMN_NAME = 'Network Name' #Name of head column, to drop it
 ORGANIZATION = 'Boyd Hyperconverged Inc' 
 # THIS DICT MADE TO FOLLOW WHICH NETWORKS ALREADY DONE
@@ -104,6 +104,7 @@ def open_link(browser, network_name):
         save_changes.click()
     except:
         print('Already Unlimited')
+    browser.quit()
     
 
 
@@ -117,6 +118,7 @@ if __name__ == '__main__':
             browser.quit()    
             take_network_from_csv()
     print('DONE')
+    
 
 
 
